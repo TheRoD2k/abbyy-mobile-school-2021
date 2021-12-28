@@ -9,7 +9,13 @@ public class Task02 {
      * @throws IllegalArgumentException Если dayOfWeek не от 0 до 6.
      */
     public static String shouldIWork(int dayOfWeek) {
-        return null;
+        if (dayOfWeek >= 0 && dayOfWeek < 5) {
+            return "work";
+        } else if (dayOfWeek > 4 && dayOfWeek < 7) {
+            return "rest";
+        } else {
+            throw new IllegalArgumentException("Invalid Day Of The Week");
+        }
     }
 
 }
